@@ -56,8 +56,21 @@ public class CarAgent : Agent
 
     public override void OnActionReceived(float[] vectorAction)
     {
+        float movimentoOrizzontale = 0.0f;
+        if(vectorAction[1] < -0.25f && vectorAction[1] >= -0.5f)
+            movimentoOrizzontale = -0.5f;
+        
+        if(vectorAction[1] <= -1.0f && vectorAction[1] > -0.5f)
+            movimentoOrizzontale = -1.0f;
+        
+        if(vectorAction[1] >= 0.25f && vectorAction[1] < 0.5f)
+            movimentoOrizzontale = 0.5f;
+    
+        if(vectorAction[1] <= 1.0f && vectorAction[1] > 0.5f)
+            movimentoOrizzontale = 1.0f;
+            
         carController.verticalMovement = vectorAction[0];
-        carController.horizontalMovement = vectorAction[1];
+        carController.horizontalMovement = movimentoOrizzontale;
         //AddReward(-4f / MaxStep);
     }
 
@@ -89,8 +102,8 @@ public class CarAgent : Agent
         this.transform.TransformPoint(Vector3.zero);
 
         Vector3 agentPosition = new Vector3(originalPosition.x+xCoordinates[Random.Range(0, xCoordinates.Length)], originalPosition.y, originalPosition.z+zCoordinates[Random.Range(0, xCoordinates.Length)]);
-
-        transform.SetPositionAndRotation(agentPosition, originalRotation);
+        
+        transform.SetPositionAndRotation(agentPosition, new Quaternion(originalRotation.x, (Random.value < 0.5 ? 0.0f : 180.0f), originalRotation.z, originalRotation.w));
 
         foreach (Parcheggio p in parcheggi){
             p.resetParkingArea();

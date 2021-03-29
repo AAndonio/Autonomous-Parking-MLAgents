@@ -24,13 +24,11 @@ public class PostoLibero : MonoBehaviour
     
     private void FixedUpdate()
     {
-
-
         if (frontHitted)
         {
             if (firstTimeHit)
             {
-                agent.getReward(0.1f, false);
+                //agent.getReward(0.1f, false);
                 firstTimeHit = false;
             }
             if (backHitted)
