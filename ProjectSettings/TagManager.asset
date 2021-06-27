@@ -11,6 +11,12 @@ TagManager:
   - Parcheggio
   - InizioPostoLibero
   - FinePostoLibero
+  - southGen
+  - northGen
+  - sWayP
+  - nWayP
+  - south
+  - north
   layers:
   - Default
   - TransparentFX

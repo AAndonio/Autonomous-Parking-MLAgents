@@ -52843,6 +52843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6723901970109947008}
+  - component: {fileID: 1209056342110049206}
   m_Layer: 0
   m_Name: ParcheggioComplesso
   m_TagString: Untagged
@@ -52880,6 +52881,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1209056342110049206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723901970109947011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82c442e35a4464149a02fbdbc382f18a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6723901970113613696
 GameObject:
   m_ObjectHideFlags: 0
@@ -53988,7 +54001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BrainParameters:
     VectorObservationSize: 5
-    NumStackedVectorObservations: 10
+    NumStackedVectorObservations: 5
     VectorActionSize: 02000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 1

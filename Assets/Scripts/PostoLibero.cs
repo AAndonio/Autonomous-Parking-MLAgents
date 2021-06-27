@@ -28,7 +28,7 @@ public class PostoLibero : MonoBehaviour
         {
             if (firstTimeHit)
             {
-                //agent.getReward(0.1f, false);
+                agent.getReward(0.10f, false);
                 firstTimeHit = false;
             }
             if (backHitted)

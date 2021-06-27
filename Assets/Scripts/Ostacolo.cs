@@ -7,7 +7,7 @@ public class Ostacolo : MonoBehaviour
 {
     private CarAgent agent;
     private bool endEpisode = true;
-    private float penalty = -0.05f;
+    private float penalty = -0.5f;
 
     public void Awake()
     {
@@ -22,7 +22,6 @@ public class Ostacolo : MonoBehaviour
             penalty = -0.05f;
             endEpisode = true;
         }
-
     }
 
     void OnTriggerStay(Collider other)

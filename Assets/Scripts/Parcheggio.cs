@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using UnityEngine.UIElements;
-
 
 // classe per salvare posizione e verso dell'auto parcheggiata
 public class parkedCar
@@ -18,8 +15,7 @@ public class Parcheggio : MonoBehaviour {
     [SerializeField]
     private GameObject freeSpotObject = null;
 
-    [SerializeField]
-    private int numberOfCarsToHide = 1;
+    private int numberOfCarsToHide = 0;
 
     private Dictionary<int, parkedCar> parkedCarsOriginal = new Dictionary<int, parkedCar>();
 
@@ -41,6 +37,14 @@ public class Parcheggio : MonoBehaviour {
                    Rotation = car.transform.rotation
                });
         }
+    }
+
+    public int getFreeSpots(){
+        return numberOfCarsToHide;
+    }
+
+    public void setFreeSpots(int freeSpots){
+        numberOfCarsToHide = freeSpots;
     }
 
     private int[] setCarsToHide(int numbersOfCarsToHide)

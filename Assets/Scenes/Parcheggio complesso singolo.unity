@@ -306,12 +306,12 @@ PrefabInstance:
     - target: {fileID: 1026950981167013127, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
       propertyPath: numberOfCarsToHide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2027486722994239434, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
       propertyPath: numberOfCarsToHide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2082019895378260082, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
@@ -326,7 +326,7 @@ PrefabInstance:
     - target: {fileID: 3464556318229613898, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
       propertyPath: numberOfCarsToHide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3555518277114872764, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
@@ -336,7 +336,7 @@ PrefabInstance:
     - target: {fileID: 4157319201495425854, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
       propertyPath: numberOfCarsToHide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4386150108630952547, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
@@ -346,7 +346,7 @@ PrefabInstance:
     - target: {fileID: 4546607070637670361, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
       propertyPath: numberOfCarsToHide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5431791818717368242, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
@@ -356,17 +356,17 @@ PrefabInstance:
     - target: {fileID: 6468698183759928984, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
       propertyPath: numberOfCarsToHide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6554650031904629976, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
       propertyPath: numberOfCarsToHide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6661177803712931692, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
       propertyPath: numberOfCarsToHide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6723901970109947008, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
@@ -432,12 +432,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: b042949f495ecfe4e9b0a3aacb4cc92e,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6723901970575303180, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
       propertyPath: m_BehaviorType
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6723901970575303180, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
@@ -482,12 +481,12 @@ PrefabInstance:
     - target: {fileID: 7393687189034400362, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
       propertyPath: numberOfCarsToHide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7647121430657285707, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
       propertyPath: numberOfCarsToHide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7681947776082606149, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
@@ -497,12 +496,12 @@ PrefabInstance:
     - target: {fileID: 8418924407690668088, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
       propertyPath: numberOfCarsToHide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8502839977227026152, guid: 6ae7e949f1a8d2143812925db50f07b3,
         type: 3}
       propertyPath: numberOfCarsToHide
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ae7e949f1a8d2143812925db50f07b3, type: 3}
