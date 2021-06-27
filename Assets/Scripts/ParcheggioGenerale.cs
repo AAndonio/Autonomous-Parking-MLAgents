@@ -14,8 +14,6 @@ public class ParcheggioGenerale : MonoBehaviour {
         parcheggi = transform.GetComponentsInChildren<Parcheggio>().ToList();
         total_free_spots = (int) Academy.Instance.EnvironmentParameters.GetWithDefault("free_spots",totalFreeSpots);
 
-        Debug.Log(total_free_spots);
-
          foreach (Parcheggio p in parcheggi){
             p.setFreeSpots(0);
         }

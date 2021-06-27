@@ -8,6 +8,9 @@ public class KeyListener : MonoBehaviour
     [SerializeField] GameObject autoParcheggio;
     [SerializeField] GameObject aiCar;
     [SerializeField] GameObject smartTrafficCars;
+    [SerializeField] Generator smartTrafficCarsNorthGenerator;
+    [SerializeField] Generator smartTrafficCarsSouthGenerator;
+
     [SerializeField] GameObject smartTrafficAI;
 
     private bool autoParcheggioStatus = true;
@@ -20,20 +23,28 @@ public class KeyListener : MonoBehaviour
     {
         if (Input.GetKeyDown("1"))
         {
-            smartTrafficAI.SetActive(!smartTrafficAIStatus);
-            smartTrafficCars.SetActive(!smartTrafficCarsStatus);
-            smartTrafficCarsStatus = !smartTrafficCarsStatus;
             smartTrafficAIStatus = !smartTrafficAIStatus;
-        } 
+            smartTrafficCarsStatus = !smartTrafficCarsStatus;
+
+            smartTrafficAI.SetActive(smartTrafficAIStatus);
+            smartTrafficCars.SetActive(smartTrafficCarsStatus);
+
+
+            if(smartTrafficAIStatus){
+                smartTrafficCarsNorthGenerator.Reset();
+                smartTrafficCarsSouthGenerator.Reset();
+            }
+        }
         
         if (Input.GetKeyDown("2")) {
-            autoParcheggio.SetActive(!autoParcheggioStatus);
             autoParcheggioStatus = !autoParcheggioStatus;
+            autoParcheggio.SetActive(autoParcheggioStatus);
+
         }
 
         if (Input.GetKeyDown("3")) {
-            aiCar.SetActive(!aiCarStatus);
             aiCarStatus = !aiCarStatus;
+            aiCar.SetActive(aiCarStatus);
         }
     }
 }
