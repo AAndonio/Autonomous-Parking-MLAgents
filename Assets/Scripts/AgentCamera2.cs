@@ -28,7 +28,7 @@ public class AgentCamera2 : Agent
         tempo = 0.0f;
         trovato = false;
         //zoom = false;
-        target.localPosition = new Vector3(Random.value * 8 - 4, Random.value * 8 - 4, Random.value * 8 - 4);
+        //target.localPosition = new Vector3(Random.value * 8 - 4, Random.value * 8 - 4, Random.value * 8 - 4);
     }
 
 

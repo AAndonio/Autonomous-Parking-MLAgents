@@ -213,6 +213,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &164119729 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2373098614083058702, guid: c6f814ebab1da004facecc3a66126027,
+    type: 3}
+  m_PrefabInstance: {fileID: 414904102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &164119730 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2376731275619787392, guid: c6f814ebab1da004facecc3a66126027,
+    type: 3}
+  m_PrefabInstance: {fileID: 414904102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &164119733
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164119729}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.031416103, y: 0.073805906, z: 0.019993689}
+  m_Center: {x: 0.000046859495, y: 0.0063161864, z: 0.005017857}
 --- !u!1001 &414904102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -220,6 +245,106 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 50369630392461829, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 50369630392461829, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50369630392461829, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50369630392461829, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 50369630392461829, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 621867506568473674, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 164119730}
+    - target: {fileID: 1007318311567655878, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371979297069502524, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: isRunning
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2372923826406380490, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 2373098614083058702, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681456809366456590, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.104881
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681456809366456590, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0621936
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681456809366456590, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -51.79985
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681456809366456590, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.20026502
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681456809366456590, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.20776549
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681456809366456590, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.04350168
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681456809366456590, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.95647013
+      objectReference: {fileID: 0}
+    - target: {fileID: 5926537643407110315, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6152170628053130885, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6464787438483161863, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
     - target: {fileID: 6723901970109947008, guid: c6f814ebab1da004facecc3a66126027,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -279,6 +404,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Integration
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723901970175767970, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723901970491951918, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Target
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723901970575303411, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6723901970872591277, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ostacolo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061816941380710336, guid: c6f814ebab1da004facecc3a66126027,
+        type: 3}
+      propertyPath: m_RayLength
+      value: 600
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f814ebab1da004facecc3a66126027, type: 3}
