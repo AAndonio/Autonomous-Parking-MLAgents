@@ -7,7 +7,7 @@ using UnityEditor;
 public class WaypointEditor
 {
     [DrawGizmo(GizmoType.NonSelected | GizmoType.Selected | GizmoType.Pickable)]
-    public static void OnDrawGizmo(WaypointAiCar waypoint, GizmoType gizmoType)
+    public static void OnDrawGizmo(WaypointAICar waypoint, GizmoType gizmoType)
     {
         if((gizmoType & GizmoType.Selected) != 0)
         {
@@ -42,7 +42,7 @@ public class WaypointEditor
 
         /*if (waypoint.branches != null)
         {
-            foreach (Waypoint branch in waypoint.branches)
+            foreach (WaypointAICar branch in waypoint.branches)
             {
                 Gizmos.color = Color.blue;
                 Gizmos.DrawLine(waypoint.transform.position, branch.transform.position);

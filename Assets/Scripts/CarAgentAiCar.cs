@@ -4,7 +4,7 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 
-public class CarAgentAiCar : Agent
+public class CarAgentAICar : Agent
 {
     private float DirHorizontal;
     private float DirVertical;
@@ -19,8 +19,8 @@ public class CarAgentAiCar : Agent
     public GameObject checkpoint;
 
     public GameObject pedone;
-    public WaypointAiCar[] waypoints;
-    private WaypointNavigator waypointNavigator;
+    public WaypointAICar[] waypoints;
+    private WaypointNavigatorAICar waypointNavigator;
 
     private float maxZdist;
     private float xDist, zDist;
@@ -33,15 +33,11 @@ public class CarAgentAiCar : Agent
 
     public GameObject redLight, greenLight;
 
-    private Vector3 originalPosition;
-    private Quaternion originalRotation;
-
     public override void Initialize()
     {
-        originalPosition = this.transform.position;
-        originalRotation = this.transform.rotation;
+        Time.timeScale = 1;
         rBody = GetComponent<Rigidbody>();
-        waypointNavigator = pedone.GetComponent<WaypointNavigator>();
+        waypointNavigator = pedone.GetComponent<WaypointNavigatorAICar>();
         redLight.SetActive(false);
         greenLight.SetActive(true);
     }
@@ -400,8 +396,8 @@ public class CarAgentAiCar : Agent
 
     private void ResetCar()
     {
-        transform.position = originalPosition;
-        transform.rotation = originalRotation;
+        transform.localPosition = new Vector3(2.72f, 0.28f, 0f);
+        transform.rotation = Quaternion.identity;
         rBody.velocity = Vector3.zero;
         rBody.angularVelocity = Vector3.zero;
     }

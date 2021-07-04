@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaypointAiCar : MonoBehaviour
+public class WaypointAICar : MonoBehaviour
 {
-    public WaypointAiCar previousWaypoint;
-    public WaypointAiCar nextWaypoint;
+    public WaypointAICar previousWaypoint;
+    public WaypointAICar nextWaypoint;
 
     //public List<Waypoint> branches;
 

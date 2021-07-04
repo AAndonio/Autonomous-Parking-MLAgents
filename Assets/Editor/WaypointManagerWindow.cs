@@ -45,7 +45,7 @@ public class WaypointManagerWindow : EditorWindow
             CreateWaypoint();
         }
 
-        if (Selection.activeGameObject != null && Selection.activeGameObject.GetComponent<WaypointAiCar>())
+        if (Selection.activeGameObject != null && Selection.activeGameObject.GetComponent<WaypointAICar>())
         {
             if (GUILayout.Button("Create waypoint before"))
             {
@@ -64,13 +64,13 @@ public class WaypointManagerWindow : EditorWindow
 
     void CreateWaypoint()
     {
-        GameObject waypointObject = new GameObject("Waypoint " + waypointRoot.childCount, typeof(WaypointAiCar));
+        GameObject waypointObject = new GameObject("Waypoint " + waypointRoot.childCount, typeof(WaypointAICar));
         waypointObject.transform.SetParent(waypointRoot, false);
 
-        WaypointAiCar waypoint = waypointObject.GetComponent<WaypointAiCar>();
+        WaypointAICar waypoint = waypointObject.GetComponent<WaypointAICar>();
         if (waypointRoot.childCount > 1)
         {
-            waypoint.previousWaypoint = waypointRoot.GetChild(waypointRoot.childCount - 2).GetComponent<WaypointAiCar>();
+            waypoint.previousWaypoint = waypointRoot.GetChild(waypointRoot.childCount - 2).GetComponent<WaypointAICar>();
             waypoint.previousWaypoint.nextWaypoint = waypoint;
             //Place the waypoint at the last position
             waypoint.transform.position = waypoint.previousWaypoint.transform.position;
@@ -81,12 +81,12 @@ public class WaypointManagerWindow : EditorWindow
 
     void CreateWaypointBefore()
     {
-        GameObject waypointObject = new GameObject("Waypoint " + waypointRoot.childCount, typeof(WaypointAiCar));
+        GameObject waypointObject = new GameObject("Waypoint " + waypointRoot.childCount, typeof(WaypointAICar));
         waypointObject.transform.SetParent(waypointRoot, false);
 
-        WaypointAiCar newWaypoint = waypointObject.GetComponent<WaypointAiCar>();
+        WaypointAICar newWaypoint = waypointObject.GetComponent<WaypointAICar>();
 
-        WaypointAiCar selectedWaypoint = Selection.activeGameObject.GetComponent<WaypointAiCar>();
+        WaypointAICar selectedWaypoint = Selection.activeGameObject.GetComponent<WaypointAICar>();
 
         waypointObject.transform.position = selectedWaypoint.transform.position;
         waypointObject.transform.forward = selectedWaypoint.transform.forward;
@@ -108,12 +108,12 @@ public class WaypointManagerWindow : EditorWindow
 
     void CreateWaypointAfter()
     {
-        GameObject waypointObject = new GameObject("Waypoint " + waypointRoot.childCount, typeof(WaypointAiCar));
+        GameObject waypointObject = new GameObject("Waypoint " + waypointRoot.childCount, typeof(WaypointAICar));
         waypointObject.transform.SetParent(waypointRoot, false);
 
-        WaypointAiCar newWaypoint = waypointObject.GetComponent<WaypointAiCar>();
+        WaypointAICar newWaypoint = waypointObject.GetComponent<WaypointAICar>();
 
-        WaypointAiCar selectedWaypoint = Selection.activeGameObject.GetComponent<WaypointAiCar>();
+        WaypointAICar selectedWaypoint = Selection.activeGameObject.GetComponent<WaypointAICar>();
 
         waypointObject.transform.position = selectedWaypoint.transform.position;
         waypointObject.transform.forward = selectedWaypoint.transform.forward;
@@ -135,7 +135,7 @@ public class WaypointManagerWindow : EditorWindow
 
     void RemoveWaypoint()
     {
-        WaypointAiCar selectedWaypoint = Selection.activeGameObject.GetComponent<WaypointAiCar>();
+        WaypointAICar selectedWaypoint = Selection.activeGameObject.GetComponent<WaypointAICar>();
 
         if(selectedWaypoint.nextWaypoint != null)
         {

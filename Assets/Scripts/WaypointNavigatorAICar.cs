@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaypointNavigatorAiCar : MonoBehaviour
+public class WaypointNavigatorAICar : MonoBehaviour
 {
     private CharacterNavigationController controller;
     public WaypointAICar currentWaypoint;

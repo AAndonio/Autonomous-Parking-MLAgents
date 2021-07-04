@@ -27,7 +27,7 @@ public class SpawnerPedoni : MonoBehaviour
                 obj = Instantiate(pedoniPrefabs[0]);
 
             Transform child = transform.GetChild(Random.Range(0, transform.childCount - 1));
-            obj.GetComponent<WaypointNavigator>().currentWaypoint = child.GetComponent<WaypointAiCar>();
+            obj.GetComponent<WaypointNavigatorAICar>().currentWaypoint = child.GetComponent<WaypointAICar>();
             obj.transform.position = child.position;
 
             yield return new WaitForEndOfFrame();
