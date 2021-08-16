@@ -885,7 +885,7 @@ MonoBehaviour:
   WheelTBR: {fileID: 6816902689591567621}
   WheelTBL: {fileID: 5348726170448218733}
   maxSteerAngle: 30
-  motorForce: 300
+  motorForce: 150
   brakes: 0
   checkpoint: {fileID: 984382178107779289}
   pedone: {fileID: 3941008896663036242}
@@ -4396,7 +4396,12 @@ PrefabInstance:
     - target: {fileID: 2505501257576936627, guid: ff187f87b5b6b5e44a37a774ddaa7d47,
         type: 3}
       propertyPath: rotationSpeed
-      value: 240
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2505501257576936627, guid: ff187f87b5b6b5e44a37a774ddaa7d47,
+        type: 3}
+      propertyPath: movementSpeed
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4695174566840064241, guid: ff187f87b5b6b5e44a37a774ddaa7d47,
         type: 3}

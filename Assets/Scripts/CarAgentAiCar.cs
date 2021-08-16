@@ -12,7 +12,7 @@ public class CarAgentAICar : Agent
     public WheelCollider WheelCFR, WheelCFL, WheelCBR, WheelCBL;
     public Transform WheelTFR, WheelTFL, WheelTBR, WheelTBL;
     public float maxSteerAngle = 30;
-    public float motorForce = 300;
+    public float motorForce = 100;
     public float brakes = 0;
 
     private Rigidbody rBody;
@@ -29,13 +29,20 @@ public class CarAgentAICar : Agent
     private bool manualBrake = false, pedoneIncontrato, pedoneSuperato;
 
     public bool isTraining;
-    private float distanza = 3.5f;
+    private float distanza = 3.5f/2;
 
     public GameObject redLight, greenLight;
+
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
 
     public override void Initialize()
     {
         Time.timeScale = 1;
+        Debug.Log(transform.localPosition);
+        Debug.Log(transform.localRotation);
+        originalPosition = transform.localPosition;
+        originalRotation = transform.localRotation;
         rBody = GetComponent<Rigidbody>();
         waypointNavigator = pedone.GetComponent<WaypointNavigatorAICar>();
         redLight.SetActive(false);
@@ -118,7 +125,7 @@ public class CarAgentAICar : Agent
         if (pedoneIncontrato)
         {
             //Se il pedone è sull'asse x vicino alla macchina e Se il pedone è sull'asse z AVANTI alla macchina allora la macchina deve fermarsi
-            if ((pedone.transform.position.x - transform.position.x) >= -9.5f && (pedone.transform.position.x - transform.position.x) <= 4.6f && pedone.transform.position.z >= transform.position.z)
+            if ((pedone.transform.position.x - transform.position.x) >= -9.5f/3 && (pedone.transform.position.x - transform.position.x) <= 4.6f/3 && pedone.transform.position.z >= transform.position.z)
             {
                 if (isTraining)
                 {
@@ -146,7 +153,7 @@ public class CarAgentAICar : Agent
             else
             {
                 vectorAction[2] = 0;
-                motorForce = 500;
+                motorForce = 150;
             }
 
             if (GetVelocitySpeed() <= 0.1f && GetVelocitySpeed() > -1)
@@ -161,7 +168,7 @@ public class CarAgentAICar : Agent
         }
         else
         {
-            motorForce = 500;
+            motorForce = 150;
             if (GetVelocitySpeed() < 3) AddReward(-100f);
         }
 
@@ -194,9 +201,9 @@ public class CarAgentAICar : Agent
 
 
         //Controllo per freezare il pedone
-        if (pedoneSuperato && (pedone.transform.position.x - transform.position.x) >= -4.8f && (pedone.transform.position.x - transform.position.x) <= 6.0f)
+        if (pedoneSuperato && (pedone.transform.position.x - transform.position.x) >= -4.8f/3 && (pedone.transform.position.x - transform.position.x) <= 6.0f/3)
         {
-            if (Vector3.Distance(transform.position, pedone.transform.position) >= 6.5)
+            if (Vector3.Distance(transform.position, pedone.transform.position) >= 6.5/3)
             {
                 pedone.GetComponent<Animator>().SetBool("isWalking", true);
                 pedone.GetComponent<CharacterNavigationController>().movementSpeed = 2f;
@@ -280,11 +287,11 @@ public class CarAgentAICar : Agent
         //if (Vector3.Dot(toTarget, transform.forward) > 0)
         if (transform.position.z + distanza < pedone.transform.position.z)
         {
-            xDist = (pedone.transform.position.x - transform.position.x) + 10;
+            xDist = (pedone.transform.position.x - transform.position.x) + 10/3;
             zDist = Mathf.Abs(pedone.transform.position.z - transform.position.z);
 
-            xCheck = (-2 < xDist) && (xDist < 14);
-            zCheck = (0 < zDist) && (zDist < 10);
+            xCheck = (-2/3 < xDist) && (xDist < 14/3);
+            zCheck = (0 < zDist) && (zDist < 10/3);
 
             if (xCheck && zCheck)
             {
@@ -396,8 +403,8 @@ public class CarAgentAICar : Agent
 
     private void ResetCar()
     {
-        transform.localPosition = new Vector3(2.72f, 0.28f, 0f);
-        transform.rotation = Quaternion.identity;
+        transform.localPosition = new Vector3(2.7f, 0.28f, -2.3f);
+        transform.rotation = new Quaternion(0,0,0,0);
         rBody.velocity = Vector3.zero;
         rBody.angularVelocity = Vector3.zero;
     }
